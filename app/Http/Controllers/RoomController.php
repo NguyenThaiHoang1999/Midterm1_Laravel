@@ -26,7 +26,7 @@ class RoomController extends Controller
     function store(Request $request)
     {
 
-        echo "asasdasdasd";
+
         $request->validate([
             'name' =>      'required|unique:rooms|max:255',
             'image'=>      'required',
@@ -38,7 +38,7 @@ class RoomController extends Controller
         ]);
 
         $name = $request->name;
-        $image = $request->image;
+        $image = $request->image->store('public');
         $area = $request->area;
         $number=$request->number;
         $price = $request->price;

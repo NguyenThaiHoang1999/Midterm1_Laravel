@@ -18,19 +18,19 @@
       <!-- Content -->
       <div id="content" >
 
-        <form action="/rooms" method="POST" >
+        <form action="/rooms" method="POST" enctype="multipart/form-data">
           @csrf
               <div class="form-group">
                   <label  for="name">Name</label>
                   <input type="text" class="form-control" name="name" placeholder="Nhập tên ">
               </div>
 
-              {{-- <div class="control-group">
+               <div class="control-group">
                 <label class="control-label">Chọn file </label>
                 <div class="controls">
                     <input type="file" name="image" title="Thêm hình vào kho" required="true"/> *
                 </div>
-            </div> --}}
+            </div>
               <div class="form-group">
                 <label  for="typeroom">Typeroom</label>
                 <input type="text" class="form-control" name="typeroom" placeholder="Nhập typeroom">
@@ -47,9 +47,7 @@
               <div class="form-group">
                 <label  for="sale">Price:</label>
                 <input type="text" class="form-control" name="price" placeholder="">
-            </div>
-
-
+              </div>
               <button type="submit" class="btn btn-primary">Thêm</button>
           </form>
 </body>
