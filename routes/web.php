@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/create','RoomController@create');
+Route::post('/rooms','RoomController@store');
+
+Route::get('/home','RoomController@home')->name('home');
+Route::get('/rooms/dashboard','RoomController@index')->name('dashboard');
